@@ -1,0 +1,6 @@
+node_modules/
+apps/web/node_modules/
+services/auth-svc/node_modules/
+services/contacts-svc/node_modules/
+services/billing-svc/node_modules/
+packages/shared/node_modules/
