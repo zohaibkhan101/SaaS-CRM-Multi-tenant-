@@ -1,0 +1,17 @@
+model Subscription {
+  id          Int      @id @default(autoincrement()) // Unique identifier for each subscription
+  tenantId    String   // Identifier for the tenant associated with the subscription
+  plan        String   // The subscription plan name
+  status      String   // Current status of the subscription (e.g., active, canceled)
+  createdAt   DateTime @default(now()) // Timestamp for when the subscription was created
+  updatedAt   DateTime @updatedAt // Timestamp for when the subscription was last updated
+}
+
+model Plan {
+  id          Int      @id @default(autoincrement()) // Unique identifier for each plan
+  name        String   // Name of the subscription plan
+  price       Float    // Price of the subscription plan
+  features    String   // Description of features included in the plan
+  createdAt   DateTime @default(now()) // Timestamp for when the plan was created
+  updatedAt   DateTime @updatedAt // Timestamp for when the plan was last updated
+}
